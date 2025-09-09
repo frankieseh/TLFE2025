@@ -12,7 +12,7 @@ An example of this calculation is given below:
 ![example calculation](./example.png)
 
 Context around this task is intentionally vague so we can see what direction you take this on your own.  With that
-said, feel free to reach out with clarifying questions.Please spend no more than 2 hours on this test.
+said, feel free to reach out with clarifying questions.  Please spend no more than 2 hours on this test.
 
 ## Key Requirements
 
@@ -20,7 +20,7 @@ said, feel free to reach out with clarifying questions.Please spend no more than
 
 - Please include and query `income-tax-bands.json` as if it was an API endpoint that you are requesting data from.
 
-- Please do not include any server-side interaction or rendering.
+- Please do not include any actual server-side interaction or rendering.
 
 - External libraries and packages are encouraged.
 
