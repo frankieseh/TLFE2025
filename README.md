@@ -4,15 +4,15 @@ This test is designed to evaluate your ability to design, implement and maintain
 
 ## Introduction
 
-Your task is to create a tool that can calculate tax to pay based on a provided salary.  The tax bands to use to perform
+Your task is to create a tool that can calculate tax to pay based on a provided salary. The tax bands to use to perform
 this calculation are provided in `income-tax-bands.json`.
 
 An example of this calculation is given below:
 
 ![example calculation](./example.png)
 
-Context around this task is intentionally vague so we can see what direction you take this on your own.  With that
-said, feel free to reach out with clarifying questions.  Please spend no more than 2 hours on this test.
+Context around this task is intentionally vague so we can see what direction you take this on your own. With that
+said, feel free to reach out with clarifying questions. Please spend no more than 2 hours on this test.
 
 ## Key Requirements
 

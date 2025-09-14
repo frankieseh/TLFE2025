@@ -1,0 +1,36 @@
+.tax_breakdown_table {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.tax_breakdown_header,
+.tax_breakdown_row,
+.tax_breakdown_total {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+  align-items: center;
+}
+
+.tax_breakdown_header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+}
+
+.tax_breakdown_row {
+  border-bottom: 1px solid #eee;
+  padding: 0.5em 0;
+}
+
+.tax_breakdown_total {
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+@media (max-width: 700px) {
+  .tax_breakdown_table {
+    width: calc(700px - 2rem);
+    overflow-x: scroll;
+  }
+}

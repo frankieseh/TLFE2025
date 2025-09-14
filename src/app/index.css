@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-VariableFont_wght.woff2') format('woff2');
+  font-display: 'swap';
+}
+
+:root {
+  font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  color: white;
+  background-color: #181818;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --custom-blue: #2222aa;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 240px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--custom-blue);
+    background-color: white;
+  }
+}

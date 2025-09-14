@@ -1,0 +1,17 @@
+.heading {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.2;
+  color: white; /* Default dark mode */
+  text-shadow: 0 0 0.25rem black;
+  padding: 0 0 1rem;
+  font-size: clamp(2rem, 4vw + 1rem, 3rem); /* Responsive scaling */
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  .heading {
+    color: var(--custom-blue);
+    text-shadow: 0 0 0.25rem #aaaaaa;
+  }
+}

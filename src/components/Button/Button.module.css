@@ -1,0 +1,44 @@
+.button {
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: white;
+  background-color: var(--custom-blue);
+  cursor: pointer;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.button:hover {
+  border-color: white;
+  box-shadow: inset 0 0 0.3rem 0 white;
+}
+.button:focus {
+  outline: 1px solid white;
+}
+.button:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  .button {
+    color: var(--custom-blue);
+    background-color: white;
+    border-color: var(--custom-blue);
+  }
+  .button:hover {
+    box-shadow: inset 0 0 0.3rem 0 var(--custom-blue);
+    border-color: var(--custom-blue);
+  }
+  .button:focus {
+    outline: 1px solid var(--custom-blue);
+  }
+}
