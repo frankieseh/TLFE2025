@@ -5,7 +5,7 @@
   color: white; /* Default dark mode */
   text-shadow: 0 0 0.25rem black;
   padding: 0 0 1rem;
-  font-size: clamp(2rem, 4vw + 1rem, 3rem); /* Responsive scaling */
+  font-size: clamp(2.2rem, 4vw + 1rem, 3rem); /* Responsive scaling */
 }
 
 /* Light mode */
