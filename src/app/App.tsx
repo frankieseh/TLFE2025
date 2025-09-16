@@ -11,6 +11,7 @@ import {
   FETCH_ERROR_MESSAGE,
   INCOME_STEP,
   INPUT_PLACEHOLDER,
+  INVALID_INCOME_ERROR,
   LOADING_MESSAGE,
   MIN_INCOME,
 } from '../utils/constants'
@@ -27,6 +28,7 @@ function App() {
     fetchTaxBands,
   } = useTaxBandStore()
   const [taxBreakdown, setTaxBreakdown] = useState<TaxBreakdown | null>(null)
+  const [inputError, setInputError] = useState<boolean>(false)
 
   useEffect(() => {
     void fetchTaxBands()
@@ -37,11 +39,17 @@ function App() {
     const input = document.querySelector<HTMLInputElement>('input')
     if (input) {
       const income = parseFloat(input.value)
-
-      const breakdownResult: TaxBreakdown = getTaxBreakdown(income, taxBands)
-      setTaxBreakdown(breakdownResult)
+      if (!isNaN(income)) {
+        if (inputError) {
+          setInputError(false)
+        }
+        const breakdownResult: TaxBreakdown = getTaxBreakdown(income, taxBands)
+        setTaxBreakdown(breakdownResult)
+      } else {
+        setInputError(true)
+      }
     }
-  }, [taxBands])
+  }, [inputError, taxBands])
 
   return (
     <>
@@ -62,7 +70,8 @@ function App() {
               <Button onClick={handleClick}>{CALCULATE_TAX_TEXT}</Button>
             </div>
             <div>
-              {taxBreakdown && (
+              {inputError && INVALID_INCOME_ERROR}
+              {!inputError && taxBreakdown && (
                 <TaxBreakdownTable taxBreakdown={taxBreakdown} />
               )}
             </div>
